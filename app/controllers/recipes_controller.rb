@@ -23,5 +23,10 @@ class RecipesController < ApplicationController
         @recipe.save
         redirect_to @recipe
     end
+    def destroy
+        @recipe = Recipe.find(params[:id])
+        @recipe.destroy
+        redirect_to recipe_url
+    end
 
 end
