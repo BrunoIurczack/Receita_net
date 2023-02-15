@@ -40,9 +40,10 @@
     <%= link_to recipes_path, class: 'btn btn-link' do %>
         <i class="glyphicon glyphicon-home">Receitas</i>
     <% end %>
-    <%= link_to recipes_path, class: 'btn btn-link' do %>
-        <i class="glyphicon glyphicon-edit">Editar</i>
+    <%= link_to edit_recipe_path(@recipe), class:'btn btn-link' do %>
+      <i class="glyphicon glyphicon-edit"> Editar</i>
     <% end %>
+
     <%= link_to recipe_path(@recipe), method: :delete, data: { confirm: "Tem certeza que deseja excluir esta receita?"}, class:'btn btn-link' do %>
       <i class="glyphicon glyphicon-remove-sign"> Deletar</i>
     <% end %>
