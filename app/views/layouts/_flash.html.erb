@@ -1,0 +1,11 @@
+<% if flash[:notice]%>
+    <div class="container">
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="alert alert-success" id="liveAlertBtn"><%= flash[:notice] %></button>
+    </div>
+<% elsif flash[:alert] %>
+    <div class="container">
+    <div id="liveAlertPlaceholder"></div>
+    <button type="button" class="alert alert-danger" id="liveAlertBtn"><%= flash[:alert] %></button>
+    </div>
+<% end %>

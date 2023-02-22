@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
     def create
         @recipe = Recipe.new(recipe_params)
         if @recipe.save
-            redirect_to @recipe 
+            redirect_to @recipe, notice:"Receita criada com sucesso!!!"
         else
             render :new
        end
@@ -30,7 +30,7 @@ class RecipesController < ApplicationController
     def destroy
         @recipe = Recipe.find(params[:id])
         @recipe.destroy
-        redirect_to recipe_url
+        redirect_to recipes_url, alert: "Receita apagada com sucesso"
     end
 
     private
