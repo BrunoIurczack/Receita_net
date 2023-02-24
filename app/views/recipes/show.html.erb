@@ -35,6 +35,7 @@
             </p>
         </article>
         <%= link_to pluralize(@recipe.comments.size, 'comentario', 'comentarios'), recipe_comments_path(@recipe) %>
+        <%= link_to 'Novo comentario', new_recipe_comment_path(@recipe), class: 'btn btn-primary' %>
     </div>
 
     <%= link_to recipes_path, class: 'btn btn-link' do %>
